@@ -7,6 +7,6 @@ for i = 1:length(fnm)
     medianbeta = median(beta); % calculate median for beta
     Y = [medianalpha medianbeta]; % save results for this iteration
     X = [X Y]; % append this iteration to the other results
-    disp('Datensatz fertig')
+    disp([num2str(i) '. Datensatz fertig'])
 end
 save('cal.mat', 'X')

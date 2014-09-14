@@ -1,4 +1,5 @@
 fnm = cellstr(ls('*.csv'));
+X = 0;
 for i = 1:length(fnm)
     raweeg = csvread(fnm{i},2560,1); % read 5 seconds from csv
     alpha = filter(alphafilter, raweeg); % filter alpha (8-13 Hz)
